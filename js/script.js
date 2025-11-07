@@ -14,8 +14,8 @@ const music = document.getElementById("loveSong");
 const musicToggle = document.getElementById("musicToggle");
 
 if (music && musicToggle) {
-  // Set initial button text to play since audio starts paused
-  musicToggle.textContent = "▶️";
+  // Set initial button text to pause since audio starts playing
+  musicToggle.textContent = "⏸️";
 
   musicToggle.addEventListener("click", () => {
     if (music.paused) {
