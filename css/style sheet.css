@@ -97,6 +97,67 @@ body {
   flex-shrink: 0;
 }
 
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .password-container {
+    padding: 20px;
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .password-container input {
+    width: 100%;
+  }
+
+  .music-player {
+    top: 10px;
+    right: 10px;
+  }
+
+  #musicToggle {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .content h1 {
+    font-size: 1.5em;
+  }
+
+  .images {
+    gap: 10px;
+    width: calc(150px * 20 + 10px * 19);
+    animation: slideLeft 15s linear infinite;
+  }
+
+  .images img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .hearts::before,
+  .hearts::after {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content h1 {
+    font-size: 1.2em;
+  }
+
+  .images {
+    gap: 5px;
+    width: calc(120px * 20 + 5px * 19);
+    animation: slideLeft 10s linear infinite;
+  }
+
+  .images img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
 @keyframes slideLeft {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); } /* Move left by half the width to loop */

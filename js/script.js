@@ -3,6 +3,12 @@ function checkPassword() {
   const input = document.getElementById("passwordInput").value;
   const error = document.getElementById("error");
   if (input.toLowerCase() === "love") {
+    // Play song immediately when navigating to love page
+    const audio = new Audio("amr-diab-al-leila.mp3");
+    audio.loop = true;
+    audio.play().catch(error => {
+      console.error("Error playing audio:", error);
+    });
     window.location.href = "love.html";
   } else {
     error.textContent = "الباسورد غلط يا جميلة 😅";
